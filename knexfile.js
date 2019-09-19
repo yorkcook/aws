@@ -7,13 +7,14 @@ const localPg = {
   password: "baller"
 };
 
-const productionDbConnection = process.env.DATABASE_URL || localPg;
+const productionDbConnection =
+  process.env.HEROKU_POSTGRESQL_AMBER_URL || localPg;
 
 module.exports = {
   development: {
     client: "sqlite3",
     connection: {
-      filename: "./database/recipe.db3"
+      filename: "./database/labby.db3"
     },
     useNullAsDefault: true,
     migrations: {
