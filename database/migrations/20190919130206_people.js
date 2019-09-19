@@ -7,18 +7,18 @@ exports.up = function(knex) {
         .notNullable()
         .unique();
       people
-        .string("slackId", 255)
+        .string("slackID", 255)
         .notNullable()
         .unique();
       people
-        .string("githubId", 255)
+        .string("githubID", 255)
         .notNullable()
         .unique();
       people.string("firstName", 255).notNullable();
 
       people.string("lastName", 255).notNullable();
 
-      people.string("timezone", 255).notNullable();
+      people.string("timeZone", 255).notNullable();
 
       people.string("program", 255);
     })
