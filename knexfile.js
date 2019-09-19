@@ -8,7 +8,8 @@ const localPg = {
 };
 
 const productionDbConnection =
-  process.env.HEROKU_POSTGRESQL_AMBER_URL || localPg;
+  //process.env.HEROKU_POSTGRESQL_AMBER_URL || localPg;
+  process.env.DATABASE_URL || localPg;
 
 module.exports = {
   development: {
