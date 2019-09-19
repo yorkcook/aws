@@ -38,7 +38,7 @@ exports.up = function(knex) {
       projects.date("start", 255).notNullable();
       projects.date("end", 255).notNullable();
       projects
-        .integer("products_id")
+        .integer("product_id")
         .unsigned()
         .notNullable()
         .references("id")
@@ -58,6 +58,7 @@ exports.up = function(knex) {
         .unique();
     })
     .createTable("groups", groups => {
+      groups.increments();
       groups
         .string("name", 255)
         .notNullable()
